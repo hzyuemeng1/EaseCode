@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CouraseTests/CouraseTests.iml" filepath="$PROJECT_DIR$/CouraseTests/CouraseTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CouraseWeek2/CouraseWeek2.iml" filepath="$PROJECT_DIR$/CouraseWeek2/CouraseWeek2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EaseCode.iml" filepath="$PROJECT_DIR$/EaseCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlinkApiLearn/FlinkApiLearn.iml" filepath="$PROJECT_DIR$/FlinkApiLearn/FlinkApiLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScalaExamples/ScalaExamples.iml" filepath="$PROJECT_DIR$/ScalaExamples/ScalaExamples.iml" />
+    </modules>
+  </component>
+</project>

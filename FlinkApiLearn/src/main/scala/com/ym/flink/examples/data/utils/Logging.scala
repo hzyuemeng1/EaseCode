@@ -1,0 +1,73 @@
+package com.ym.flink.examples.data.utils
+
+import org.slf4j.{LoggerFactory, Logger}
+
+/**
+  * Created by hzyuemeng1 on 2016/9/1.
+  */
+trait Logging {
+
+
+  // Make the log field transient so that objects with Logging can
+  // be serialized and used on another machine
+  @transient private var log_ : Logger = null
+
+  // Method to get the logger name for this object
+  protected def logName = {
+    // Ignore trailing $'s in the class names for Scala objects
+    this.getClass.getName.stripSuffix("$")
+  }
+
+  // Method to get or create the logger for this object
+  protected def log: Logger = {
+    if (log_ == null) {
+      log_ = LoggerFactory.getLogger(logName)
+    }
+    log_
+  }
+
+
+  // Log methods that take only a String
+  protected def logInfo(msg: => String) {
+    log.info(msg)
+  }
+
+  protected def logDebug(msg: => String) {
+    log.debug(msg)
+  }
+
+  protected def logTrace(msg: => String) {
+    log.trace(msg)
+  }
+
+  protected def logWarning(msg: => String) {
+    log.warn(msg)
+  }
+
+  protected def logError(msg: => String) {
+     log.error(msg)
+  }
+
+  // Log methods that take Throwables (Exceptions/Errors) too
+  protected def logInfo(msg: => String, throwable: Throwable) {
+     log.info(msg, throwable)
+  }
+
+  protected def logDebug(msg: => String, throwable: Throwable) {
+   log.debug(msg, throwable)
+  }
+
+  protected def logTrace(msg: => String, throwable: Throwable) {
+    log.trace(msg, throwable)
+  }
+
+  protected def logWarning(msg: => String, throwable: Throwable) {
+    log.warn(msg, throwable)
+  }
+
+  protected def logError(msg: => String, throwable: Throwable) {
+   log.error(msg, throwable)
+  }
+
+
+}
